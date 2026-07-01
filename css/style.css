@@ -248,3 +248,16 @@ button {
   padding: 20px;
   border-radius: 10px;
 }
+.settings-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.settings-box button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
