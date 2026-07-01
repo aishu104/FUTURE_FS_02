@@ -191,3 +191,48 @@ button {
 .hidden {
   display: none;
 }
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.calendar-header button {
+  padding: 5px 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  min-height: 60px;
+}
+
+.day:hover {
+  background: #e5e7eb;
+}
+
+.today {
+  border: 2px solid #4f46e5;
+}
+
+.has-task {
+  background: #dbeafe;
+}
+
+.task-box {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
