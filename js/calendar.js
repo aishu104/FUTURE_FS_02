@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 if (!localStorage.getItem("nexuscrm_user")) {
   window.location.href = "index.html";
 }
@@ -79,3 +80,4 @@ function nextMonth() {
 }
 
 renderCalendar();
+});
