@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Calendar</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>NexusCRM</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="leads.html">Leads</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="deals.html">Deals</a>
+    <a href="tasks.html">Tasks</a>
+    <a class="active" href="calendar.html">Calendar</a>
+    <a href="reports.html">Reports</a>
+    <a href="settings.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Calendar</h1>
+
+    <div class="calendar-header">
+      <button onclick="prevMonth()">&lt;</button>
+      <h2 id="monthYear"></h2>
+      <button onclick="nextMonth()">&gt;</button>
+    </div>
+
+    <div id="calendar" class="calendar-grid"></div>
+
+    <div class="task-box">
+      <h3>Tasks on Selected Date</h3>
+      <ul id="dayTasks"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/calendar.js"></script>
+
+</body>
+</html>
