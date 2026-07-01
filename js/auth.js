@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 if (!localStorage.getItem("nexuscrm_user")) {
   window.location.href = "index.html";
 }
@@ -25,3 +26,4 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 if (localStorage.getItem("nexuscrm_user")) {
   window.location.href = "dashboard.html";
 }
+});
