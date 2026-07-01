@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 if (!localStorage.getItem("nexuscrm_user")) {
   window.location.href = "index.html";
 }
@@ -34,3 +35,4 @@ document.getElementById("dealsCount").innerText =
 
 document.getElementById("tasksCount").innerText =
   JSON.parse(localStorage.getItem("tasks")).length;
+});
