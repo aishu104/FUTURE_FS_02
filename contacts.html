@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Contacts</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>NexusCRM</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="leads.html">Leads</a>
+    <a class="active" href="contacts.html">Contacts</a>
+    <a href="deals.html">Deals</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="reports.html">Reports</a>
+    <a href="settings.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Contacts</h1>
+
+    <div class="top-bar">
+      <input type="text" id="searchContacts" placeholder="Search contacts..." />
+      <button onclick="openContactForm()">+ Add Contact</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Company</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="contactTable"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<!-- FORM -->
+<div id="contactPopup" class="popup hidden">
+  <div class="popup-content">
+    <h2>Contact</h2>
+
+    <input type="hidden" id="contactId" />
+
+    <input type="text" id="cname" placeholder="Name" />
+    <input type="email" id="cemail" placeholder="Email" />
+    <input type="text" id="cphone" placeholder="Phone" />
+    <input type="text" id="ccompany" placeholder="Company" />
+
+    <button onclick="saveContact()">Save</button>
+    <button onclick="closeContactForm()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/contacts.js"></script>
+
+</body>
+</html>
