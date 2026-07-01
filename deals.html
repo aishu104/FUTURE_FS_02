@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Deals</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>NexusCRM</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="leads.html">Leads</a>
+    <a href="contacts.html">Contacts</a>
+    <a class="active" href="deals.html">Deals</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="reports.html">Reports</a>
+    <a href="settings.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Deals Pipeline</h1>
+
+    <div class="top-bar">
+      <input type="text" id="searchDeals" placeholder="Search deals..." />
+      <button onclick="openDealForm()">+ Add Deal</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Deal Name</th>
+          <th>Value ($)</th>
+          <th>Stage</th>
+          <th>Owner</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="dealTable"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<!-- FORM -->
+<div id="dealPopup" class="popup hidden">
+  <div class="popup-content">
+    <h2>Deal</h2>
+
+    <input type="hidden" id="dealId" />
+
+    <input type="text" id="dname" placeholder="Deal Name" />
+    <input type="number" id="dvalue" placeholder="Value ($)" />
+
+    <select id="dstage">
+      <option>New</option>
+      <option>In Progress</option>
+      <option>Won</option>
+      <option>Lost</option>
+    </select>
+
+    <input type="text" id="downer" placeholder="Owner" />
+
+    <button onclick="saveDeal()">Save</button>
+    <button onclick="closeDealForm()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/deals.js"></script>
+
+</body>
+</html>
