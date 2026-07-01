@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 if (!localStorage.getItem("nexuscrm_user")) {
   window.location.href = "index.html";
 }
@@ -96,4 +97,5 @@ document.getElementById("searchContacts").addEventListener("input", function(e) 
   );
 
   renderContacts(filtered);
+});
 });
