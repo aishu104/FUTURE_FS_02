@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Reports</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>NexusCRM</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="leads.html">Leads</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="deals.html">Deals</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="calendar.html">Calendar</a>
+    <a class="active" href="reports.html">Reports</a>
+    <a href="settings.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Reports & Analytics</h1>
+
+    <div class="chart-grid">
+
+      <div class="chart-box">
+        <h3>Leads vs Contacts</h3>
+        <canvas id="chart1"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Deals Status</h3>
+        <canvas id="chart2"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Tasks Status</h3>
+        <canvas id="chart3"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/reports.js"></script>
+
+</body>
+</html>
