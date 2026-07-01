@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Leads</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>NexusCRM</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a class="active" href="leads.html">Leads</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="deals.html">Deals</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="reports.html">Reports</a>
+    <a href="settings.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Leads</h1>
+
+    <div class="top-bar">
+      <input type="text" id="search" placeholder="Search leads..." />
+      <button onclick="openForm()">+ Add Lead</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Company</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="leadTable"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<!-- FORM -->
+<div id="formPopup" class="popup hidden">
+  <div class="popup-content">
+    <h2 id="formTitle">Add Lead</h2>
+
+    <input type="hidden" id="leadId" />
+
+    <input type="text" id="name" placeholder="Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="text" id="phone" placeholder="Phone" />
+    <input type="text" id="company" placeholder="Company" />
+
+    <button onclick="saveLead()">Save</button>
+    <button onclick="closeForm()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/leads.js"></script>
+
+</body>
+</html>
