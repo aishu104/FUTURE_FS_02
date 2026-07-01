@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusCRM - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>NexusCRM</h2>
+
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="leads.html">Leads</a>
+      <a href="contacts.html">Contacts</a>
+      <a href="deals.html">Deals</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="reports.html">Reports</a>
+      <a href="settings.html">Settings</a>
+
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <h1>Dashboard</h1>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Leads</h3>
+          <p id="leadsCount">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Contacts</h3>
+          <p id="contactsCount">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Deals</h3>
+          <p id="dealsCount">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Tasks</h3>
+          <p id="tasksCount">0</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>
