@@ -1,3 +1,6 @@
+if (!localStorage.getItem("nexuscrm_user")) {
+  window.location.href = "index.html";
+}
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
