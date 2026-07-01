@@ -1,3 +1,6 @@
+if (!localStorage.getItem("nexuscrm_user")) {
+  window.location.href = "index.html";
+}
 const Storage = {
   get(key) {
     return JSON.parse(localStorage.getItem(key)) || [];
