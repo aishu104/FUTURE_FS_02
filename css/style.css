@@ -261,3 +261,30 @@ button {
   width: 100%;
   margin: 10px 0;
 }
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark .main {
+  background: #111827;
+}
+
+body.dark .card,
+body.dark table,
+body.dark .popup-content,
+body.dark .settings-box {
+  background: #1f2937;
+  color: white;
+}
+
+body.dark input,
+body.dark select {
+  background: #111827;
+  color: white;
+  border: 1px solid #374151;
+}
+
+body.dark .sidebar {
+  background: #000;
+}
